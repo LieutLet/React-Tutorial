@@ -4,7 +4,11 @@ import Button from "./components/Button";
 function App() {
   return (
     <div>
-      <Button buttonName="Click me!" />
+      <Button
+        children="Click me!"
+        color="secondary"
+        onClick={() => console.log("Clicked!")}
+      />
     </div>
   );
 }

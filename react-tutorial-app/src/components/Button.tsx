@@ -1,11 +1,23 @@
+//import React from "react";
+
 interface Props {
-  buttonName: string;
+  children: string;
+  color?:
+    | "primary"
+    | "secondary"
+    | "success"
+    | "danger"
+    | "warning"
+    | "info"
+    | "light"
+    | "dark";
+  onClick: () => void;
 }
 
-const Button = ({ buttonName }: Props) => {
+const Button = ({ children, color = "primary", onClick }: Props) => {
   return (
-    <button type="button" className="btn btn-primary">
-      {buttonName}
+    <button type="button" className={"btn btn-" + color} onClick={onClick}>
+      {children}
     </button>
   );
 };
